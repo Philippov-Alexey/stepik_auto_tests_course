@@ -8,11 +8,11 @@ try:
     browser.get(link)
 
     # Ваш код, который заполняет обязательные поля
-    input1 = browser.find_element(By.CSS_SELECTOR, 'body > div > form > div.first_block > div.form-group.first_class > input')
+    input1 = browser.find_element(By.CSS_SELECTOR, 'div.form-group.first_class > input')
     input1.send_keys("Alexey")
-    input2 = browser.find_element(By.CSS_SELECTOR, 'body > div > form > div.first_block > div.form-group.second_class > input')
+    input2 = browser.find_element(By.CSS_SELECTOR, 'div.form-group.second_class > input')
     input2.send_keys("Philippov")
-    input3 = browser.find_element(By.CSS_SELECTOR, 'body > div > form > div.first_block > div.form-group.third_class > input')
+    input3 = browser.find_element(By.CSS_SELECTOR, 'div.form-group.third_class > input')
     input3.send_keys("a1@gmail.com")
 
     # Отправляем заполненную форму

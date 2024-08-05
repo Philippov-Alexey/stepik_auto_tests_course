@@ -14,18 +14,24 @@ try:
     browser.get(link)
 
     # считываем число
-    x_element = browser.find_element(By.XPATH, '//*[@id="input_value"]')
+    # x_element = browser.find_element(By.XPATH, '//*[@id="input_value"]')
+    # x_element = browser.find_element(By.CSS_SELECTOR, '#input_value')
+    x_element = browser.find_element(By.ID, 'input_value')
     x = x_element.text
     print(x)
     # вычисляем по формуле
     y = calc(x)
     print(y)
     # заполняем поле значением вычисленного числа
-    answer = browser.find_element(By.XPATH, '//*[@id="answer"]')
+    # answer = browser.find_element(By.XPATH, '//*[@id="answer"]')
+    # answer = browser.find_element(By.CSS_SELECTOR, '#answer')
+    answer = browser.find_element(By.ID, 'answer')
     answer.send_keys(y)
 
     # ставим галку в чекбоксе
-    checkbox = browser.find_element(By.XPATH, '//*[@id="robotCheckbox"]')
+    # checkbox = browser.find_element(By.XPATH, '//*[@id="robotCheckbox"]')
+    # checkbox = browser.find_element(By.CSS_SELECTOR, '#robotCheckbox')
+    checkbox = browser.find_element(By.ID, 'robotCheckbox')
     checkbox.click()
 
     # выбираем вариант в радиобатоне
@@ -33,7 +39,8 @@ try:
     radio.click()
 
     # жмем кнопку "Submit"
-    sub = browser.find_element(By.XPATH, '/html/body/div/form/button')
+    # sub = browser.find_element(By.XPATH, '/html/body/div/form/button')
+    sub = browser.find_element(By.CSS_SELECTOR, 'body > div > form > button')
     sub.click()
 
 finally:

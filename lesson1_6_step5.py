@@ -10,8 +10,8 @@ try:
     browser.get(link)
     t = str(math.ceil(math.pow(math.pi, math.e)*10000))
     print(t)
-    link = browser.find_element(By.LINK_TEXT, t)
-    link.click()
+    redirect = browser.find_element(By.LINK_TEXT, t)
+    redirect.click()
 
     input1 = browser.find_element(By.TAG_NAME, 'input')
     input1.send_keys("Ivan")
