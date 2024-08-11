@@ -12,7 +12,7 @@ def browser():
     return browser
 
 
-class TestMainPage1():
+class TestMainPage1:
     # вызываем фикстуру в тесте, передав ее как параметр
     def test_guest_should_see_login_link(self, browser):
         browser.get(link)
